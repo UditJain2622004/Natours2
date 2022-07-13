@@ -1,0 +1,50 @@
+doctype html 
+html 
+    head 
+        //- #{} is used as we use ${} in javscript, to create a template string
+        //-now this becomes "Natours | The Forest hiker" bcz tour variable = "The Forest hiker"
+        title Natours | #{tour}
+        
+        //- attributes are defined in parenthesis () without any space b/w ele. name and ()
+        link(rel='stylesheet' href='css/style.css')
+        link(rel='shortcut icon' type='image/png' href='img/favicon.png') 
+    
+
+    body 
+        //-simple html element
+        h1 The Park Camper           
+        p Some text
+
+        //- using variables
+        h1= tour 
+        //-we can also use javascript with the = syntax (there should be a space after =)
+        h2= user.toUpperCase()
+
+        //- adding a - means it is "unbuffered" code . it does not show in output but we can use it
+        - const x = 9       
+
+        //-we use the unbuffered code here
+        h3= 2*x             
+
+        //- Comments
+        //- using (//-) it will be a comment
+        // using (//) it will be a comment but it will be visible in html when we inspect in chrome
+
+
+        // Adding classes (using .)     
+        //- this is = <header class="header new">
+        header.header.new
+
+        // this is = <a href="#" class="nav__el">All tours</a>
+        a.nav__el(href='#') All tours
+
+        // To define a div we don't even need to write "div"  
+        //- this means <div class = "class1 class2">  // or div.class1.class2
+        .class1.class2    
+
+        // to define a space b/w two same level elements
+        //- put a "| " on the line between ("|" and then a space)
+        //- this space is not within any of these elements
+        h1.first hell0 
+        | 
+        h1.second world
